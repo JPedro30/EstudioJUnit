@@ -1,7 +1,9 @@
 package test;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -69,6 +71,32 @@ public class CalculadoraTest {
 
         assertEquals(esperado, suma, 0.01, "SUMA DECIMALES");
         System.out.println("SUMA DECIMALES FUNCIONA");
+
+    }
+
+    @Test
+    void testEstudioAssert4(){
+
+        System.out.println("ASSERTALL SUMA TEST");
+        Calculadora calc = new Calculadora();
+        int suma = calc.suma(3,12);
+        int esperado = 15;
+
+        assertAll(
+                // EXPRESION LAMBDA ANONIMA
+                ()->assertEquals(esperado, suma, "Error en la suma"),
+                
+                ()->assertTrue(suma>10)
+
+               );
+    }
+
+    @Test
+    void testEstudioAssert5(){
+
+        Calculadora calc = new Calculadora();
+        
+        assertThrows(ArithmeticException.class, ()->calc.div(10, 0), "Se esperaba que se lanzara la excepcion");
 
     }
 
