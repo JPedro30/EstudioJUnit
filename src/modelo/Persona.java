@@ -3,6 +3,7 @@ package modelo;
 public class Persona {
 	private String nombre;
 	private String poblacion;
+	@SuppressWarnings("unused")
 	private String dni;
 
 	public Persona() {
@@ -31,20 +32,20 @@ public class Persona {
                 int numDni=Integer.parseInt(numeroDNI);
                 int resto = numDni % 23;
                 char letraDni=letrasDNI.charAt(resto);
-                System.out.println("---"+letraDni+"-----");
+                System.out.println("********-"+letraDni);
 
                 if(letra==letraDni) {
                     System.out.println("DNI Correcto");
                 } else {
-                    System.err.println("Dni Incorrecto");
+                    System.err.println("DNI Incorrecto");
                     dniCorrecto=false;
                 }
                         
-            } catch (NumberFormatException  e) {				
+            } catch (NumberFormatException  e) {		
                 dniCorrecto=false;
             }   	     	 
 	    } else {
-	   	    System.err.println("Dni Incorrecto");
+	   	    System.err.println("DNI Incorrecto");
 	   	    dniCorrecto=false;
 	    }
 		

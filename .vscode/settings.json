@@ -1,7 +1,15 @@
 {
-    "java.project.sourcePaths": ["src"],
+    "java.project.sourcePaths": [
+        "src"
+    ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
+    ],
+    "java.completion.filteredTypes": [
+        "org.junit.Test",
+        "org.junit.Assert",
+        "junit.*",
+        "junit.framework.*"
     ]
 }

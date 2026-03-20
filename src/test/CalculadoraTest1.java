@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import modelo.Calculadora;
 
-public class CalculadoraTest {
+public class CalculadoraTest1 {
 
     @Test
     void testEstudioAssert1(){
